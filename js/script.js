@@ -42,13 +42,9 @@ function changeHeading() {
         heading.classList.add("subheading")
 }
 
-
-
 /* Question 3:
 
 Use the style property on the heading variable from the question above to change its font size to "2em". */
-
-
 
 /* Question 4:
 
@@ -90,7 +86,9 @@ Inside the function, loop through the list parameter and console log the name pr
 
 Call the function and pass in the cats variable in the script.js file in the repo. */
 
+function listLoop(list) {
 
+}
 
 
 
@@ -111,5 +109,5 @@ Call the function and pass in the cats array as the argument.
 Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container. */
 
 function createCats(cats) {
-    
+
 }
