@@ -28,13 +28,27 @@ Select the h3 from the HTML using the querySelector method and assign it to a va
 
 Change its innerHTML value to "Updated heading". */
 
+// Question 2
 
+let heading = document.querySelector("h3");
+
+function changeHeading() {
+        heading.innerHTML = "Updated heading";
+
+// Question 3
+        heading.style.fontSize = "2em";
+
+// Question 4
+        heading.classList.add("subheading")
+}
 
 
 
 /* Question 3:
 
 Use the style property on the heading variable from the question above to change its font size to "2em". */
+
+
 
 /* Question 4:
 
@@ -50,7 +64,7 @@ Write code that selects all the p elements on a page and assigns them to a varia
 
 Loop through the p elements and change the colour of each to "red". */
 
-
+let paragraphs = document.querySelectorAll("p");
 
 
 
@@ -58,6 +72,12 @@ Loop through the p elements and change the colour of each to "red". */
 
 Select the div with a class of results, assign it to a variable called resultsContainer and set its inner HTML to be <p>New paragraph</p> and its background colour to be yellow. */
 
+let resultContainer = document.querySelector(".results");
+
+function changeResults() {
+        resultContainer.innerHTML = "<p>New paragraph</p>";
+        resultContainer.style.backgroundColor = "yellow";
+}
 
 
 
@@ -90,3 +110,6 @@ Call the function and pass in the cats array as the argument.
 
 Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container. */
 
+function createCats(cats) {
+    
+}
