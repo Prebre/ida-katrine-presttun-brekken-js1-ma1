@@ -18,7 +18,7 @@ Create an object called cat.
 
 Give the object one property called complain. complain's value should be a method (a function) which logs the string "Meow!". */
 
-
+const cat = Object.create(cats);
 
 
 
@@ -28,29 +28,21 @@ Select the h3 from the HTML using the querySelector method and assign it to a va
 
 Change its innerHTML value to "Updated heading". */
 
-// Question 2
-
 let heading = document.querySelector("h3");
 
 function changeHeading() {
         heading.innerHTML = "Updated heading";
 
-// Question 3
-        heading.style.fontSize = "2em";
-
-// Question 4
-        heading.classList.add("subheading")
-}
-
 /* Question 3:
 
 Use the style property on the heading variable from the question above to change its font size to "2em". */
+        heading.style.fontSize = "2em";
 
 /* Question 4:
 
 Add a class to the heading variable called subheading. */
-
-
+        heading.classList.add("subheading")
+}
 
 
 
@@ -61,6 +53,14 @@ Write code that selects all the p elements on a page and assigns them to a varia
 Loop through the p elements and change the colour of each to "red". */
 
 let paragraphs = document.querySelectorAll("p");
+
+function changeColour() {
+
+        for (var i = 0; i < paragraphs.length; i++) {
+
+                paragraph[i].style.color = "red";
+        }
+}
 
 
 
@@ -88,6 +88,10 @@ Call the function and pass in the cats variable in the script.js file in the rep
 
 function listLoop(list) {
 
+        for (var i = 0; i < list.length;  i++) {
+
+                console.log(list[i].name);
+        }
 }
 
 
