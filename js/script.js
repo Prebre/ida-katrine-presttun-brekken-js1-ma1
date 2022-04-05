@@ -1,28 +1,10 @@
-const cats = [
-    {
-        name: "Blob",
-        age: 10
-    },
-    {
-        name: "Harold",
-    },
-    {
-        name: "Blurt",
-        age: 21
-    }
-];
-
-/* Question 1:
-
-Create an object called cat.
-
-Give the object one property called complain. complain's value should be a method (a function) which logs the string "Meow!". */
+// Question 1
 
 const cat = {
         complain: function() {
                 console.log("Meow!");
         }
-    }
+}
 
 cat.complain();
 
@@ -34,13 +16,17 @@ let heading = document.querySelector("h3");
 
 heading.innerHTML = "Updated heading";
 
+
+
 // Question 3
 
 heading.style.fontSize = "2em";
 
+
+
 // Question 4
 
-heading.classList.add("subheading")
+heading.classList.add("subheading");
 
 
 
@@ -48,10 +34,10 @@ heading.classList.add("subheading")
 
 let paragraphs = document.querySelectorAll("p");
 
-for (var i = 0; i < paragraphs.length; i++) {
+for (let i = 0; i < paragraphs.length; i++) {
 
         paragraphs[i].style.color = "red";
-        }
+}
 
 
 
@@ -72,15 +58,24 @@ Inside the function, loop through the list parameter and console log the name pr
 
 Call the function and pass in the cats variable in the script.js file in the repo. */
 
-function listLoop(list) {
+function nameList(list) {
 
-        for (var i = 0; i < list.length;  i++) {
-
-                console.log(list[i].name);
-        }
+        for (let n = 0; n < list.length; i++) {}
 }
 
-
+const cats = [
+    {
+        name: "Blob",
+        age: 10
+    },
+    {
+        name: "Harold",
+    },
+    {
+        name: "Blurt",
+        age: 21
+    }
+];
 
 /* Question 8:
 
@@ -97,7 +92,3 @@ Return the HTML from the function.
 Call the function and pass in the cats array as the argument.
 
 Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container. */
-
-function createCats(cats) {
-
-}
