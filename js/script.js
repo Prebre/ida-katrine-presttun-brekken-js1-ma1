@@ -18,63 +18,49 @@ Create an object called cat.
 
 Give the object one property called complain. complain's value should be a method (a function) which logs the string "Meow!". */
 
-const cat = Object.create(cats);
+const cat = {
+        complain: function() {
+                console.log("Meow!");
+        }
+    }
+
+cat.complain();
 
 
 
-/* Question 2:
-
-Select the h3 from the HTML using the querySelector method and assign it to a variable called heading.
-
-Change its innerHTML value to "Updated heading". */
+// Question 2
 
 let heading = document.querySelector("h3");
 
-function changeHeading() {
-        heading.innerHTML = "Updated heading";
+heading.innerHTML = "Updated heading";
 
-/* Question 3:
+// Question 3
 
-Use the style property on the heading variable from the question above to change its font size to "2em". */
-        heading.style.fontSize = "2em";
+heading.style.fontSize = "2em";
 
-/* Question 4:
+// Question 4
 
-Add a class to the heading variable called subheading. */
-        heading.classList.add("subheading")
-}
+heading.classList.add("subheading")
 
 
 
-/* Question 5:
-
-Write code that selects all the p elements on a page and assigns them to a variable called paragraphs.
-
-Loop through the p elements and change the colour of each to "red". */
+// Question 5
 
 let paragraphs = document.querySelectorAll("p");
 
-function changeColour() {
+for (var i = 0; i < paragraphs.length; i++) {
 
-        for (var i = 0; i < paragraphs.length; i++) {
-
-                paragraph[i].style.color = "red";
+        paragraphs[i].style.color = "red";
         }
-}
 
 
 
-/* Question 6:
-
-Select the div with a class of results, assign it to a variable called resultsContainer and set its inner HTML to be <p>New paragraph</p> and its background colour to be yellow. */
+// Question 6:
 
 let resultContainer = document.querySelector(".results");
 
-function changeResults() {
-        resultContainer.innerHTML = "<p>New paragraph</p>";
-        resultContainer.style.backgroundColor = "yellow";
-}
-
+resultContainer.innerHTML = "<p>New paragraph</p>";
+resultContainer.style.backgroundColor = "yellow";
 
 
 
