@@ -50,18 +50,7 @@ resultContainer.style.backgroundColor = "yellow";
 
 
 
-/* Question 7:
-
-Create a function that has one parameter called list.
-
-Inside the function, loop through the list parameter and console log the name property in each object.
-
-Call the function and pass in the cats variable in the script.js file in the repo. */
-
-function nameList(list) {
-
-        for (let n = 0; n < list.length; i++) {}
-}
+// Question 7
 
 const cats = [
     {
@@ -76,6 +65,18 @@ const cats = [
         age: 21
     }
 ];
+
+function nameList(list) {
+    
+
+        for (let i = 0; i < list.length; i++) {
+
+                console.log(list[i].name);
+        }
+}
+
+nameList(cats)
+
 
 /* Question 8:
 
@@ -92,3 +93,37 @@ Return the HTML from the function.
 Call the function and pass in the cats array as the argument.
 
 Assign the return value of the function to the innerHTML property of the element on the HTML page with a class of cat-container. */
+
+function createCats(cats) {
+
+        const catProfiles = document.querySelector(".cat-container");
+
+        for (let i = 0; i < cats.length; i++) {
+
+                let catContainer = document.createElement("div");
+
+                let nameObject = document.createElement("h5");
+
+                nameObject.innerHTML = cats[i].name;
+
+                let ageObject = document.createElement("p");
+
+                ageObject.innerHTML = cats[i].age;
+
+                catContainer.appendChild(document.createTextNode(nameObject + ageObject));
+
+                if(cats[i].age !== Number && !cats[i].age) {
+                    
+                        ageObject.innerHTML = "Age unknown";
+
+                } else {
+
+                        ageObject.innerHTML = cats[i].age;
+
+                }
+        
+        catProfiles.appendChild(catContainer);
+        }
+}
+
+createCats(cats)
