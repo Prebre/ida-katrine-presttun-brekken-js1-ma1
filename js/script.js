@@ -52,6 +52,7 @@ resultContainer.style.backgroundColor = "yellow";
 
 // Question 7
 
+// Variable found in original file
 const cats = [
     {
         name: "Blob",
@@ -100,19 +101,9 @@ function createCats(cats) {
 
         for (let i = 0; i < cats.length; i++) {
 
-                let catContainer = document.createElement("div");
-
-                let nameObject = document.createElement("h5");
-
-                nameObject.innerHTML = cats[i].name;
-
                 let ageObject = document.createElement("p");
 
-                ageObject.innerHTML = cats[i].age;
-
-                catContainer.appendChild(document.createTextNode(nameObject + ageObject));
-
-                if(cats[i].age !== Number && !cats[i].age) {
+                if(!cats[i].age) {
                     
                         ageObject.innerHTML = "Age unknown";
 
@@ -121,6 +112,14 @@ function createCats(cats) {
                         ageObject.innerHTML = cats[i].age;
 
                 }
+
+                let catContainer = document.createElement("div");
+
+                let nameObject = document.createElement("h5");
+
+                nameObject.innerHTML = cats[i].name;
+
+                catContainer.append(nameObject, ageObject);
         
         catProfiles.appendChild(catContainer);
         }
